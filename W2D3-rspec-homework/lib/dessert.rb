@@ -8,8 +8,10 @@ class Dessert
     @ingredients = []
   end
 
-  def add_ingredient(ingredient)
-    @ingredients << ingredient
+  def add_ingredient(*ingredients)
+    ingredients.each do |ingredient|
+      @ingredients << ingredient
+    end
   end
 
   def mix!
