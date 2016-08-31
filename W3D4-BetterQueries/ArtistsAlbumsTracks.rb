@@ -1,3 +1,5 @@
+# => Count all of the tracks on each album by a given artist
+
 # app/models/track.rb
 class Track
    belongs_to(
@@ -47,6 +49,10 @@ class Artist
   end
 
   def better_tracks_query
-    # TODO: your code here
+    albums = self.albums(:tracks)
+    tracks_count = {}
+
+    albums.each do |album|
+      album_count[album] = album.tracks.length
   end
 end
