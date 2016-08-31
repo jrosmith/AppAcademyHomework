@@ -1,3 +1,8 @@
+# => Create a hash with bus id's as keys and an array of bus
+# => drivers as the corresponding value.
+# =>  E.g. {'1' => ['Joan Lee', 'Charlie McDonald', 'Kevin Quashie'],
+# => '2' => ['Ed Michaels', 'Lisa Frank', 'Sharla Alegria']}
+
 # app/models/driver.rb
 class Driver
   belongs_to(
@@ -51,7 +56,12 @@ class Route
     all_drivers
   end
 
+  # 2 queries to database
   def better_drivers_query
-    # TODO: your code here
+    buses = self.buses.includes(:drivers)
+    bus_drivers = {}
+
+    buses.each do |bus|
+      bus_drivers[bus] = buses.drivers
   end
 end
