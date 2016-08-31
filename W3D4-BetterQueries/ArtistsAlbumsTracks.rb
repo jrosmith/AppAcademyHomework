@@ -48,6 +48,7 @@ class Artist
     tracks_count
   end
 
+  # => 2 queries to database.
   def better_tracks_query
     albums = self.albums.includes(:tracks)
     tracks_count = {}
