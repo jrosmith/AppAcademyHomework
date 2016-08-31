@@ -1,3 +1,5 @@
+# => Create an array of all the seeds within a given house.
+
 # app/models/gardener.rb
 class Gardener
   belongs_to(
@@ -31,6 +33,13 @@ class Plant
     foreign_key: :plant_id,
     primary_key: :id
   )
+
+  # => Don't think I need this?
+  # has_one(
+  #   :house,
+  #   through: :gardener,
+  #   source: :house
+  # )
 end
 
 
@@ -71,7 +80,16 @@ class House
     seeds
   end
 
+  # => Wrote a has_one method for plants, but I realized that since
+  # => it belongs to a gardener, and the gardener belongs to a house,
+  # => I don't need that relationship. I think. I believe this is just
+  # => 2 queries.
   def better_seeds_query
-    # TODO: your code here
+    plants = self.plants.includes(:seeds)
+    seeds_by_house = []
+
+    plants.each do |plant|
+      seeds_by_house << [plant.seeds.length]
+    end
   end
 end
