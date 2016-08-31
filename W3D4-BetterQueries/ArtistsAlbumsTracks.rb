@@ -49,7 +49,7 @@ class Artist
   end
 
   def better_tracks_query
-    albums = self.albums(:tracks)
+    albums = self.albums.includes(:tracks)
     tracks_count = {}
 
     albums.each do |album|
