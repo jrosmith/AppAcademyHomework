@@ -54,5 +54,6 @@ class Artist
 
     albums.each do |album|
       album_count[album] = album.tracks.length
+    end
   end
 end
