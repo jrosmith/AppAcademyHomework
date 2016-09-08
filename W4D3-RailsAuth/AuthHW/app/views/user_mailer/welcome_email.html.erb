@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>You can never come here!</title>
+  </head>
+  <body>
+    <h1>You've been chosen, <%= @user.name %>!</h1>
+
+    <p>
+      After extensive research by the secret police we've
+      determined that you, <%= @user.name %> with username
+      <%= @user.username %> are unfit to be a part of our
+      glorious leader's vision!
+    </p>
+    <p>
+      To login to the social network we've created for all
+      undesirables, please follow this link: <%= @url %>
+    </p>
+
+    <p>
+      We appreciate your understanding that a more perfect
+      world cannot exist with you!
+    </p>
+  </body>
+</html>
