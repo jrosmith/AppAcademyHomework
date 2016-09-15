@@ -80,9 +80,17 @@ herd.forEach((elephant) => {
   Elephant.paradeHelper(elephant);
 });
 
-// PHASE IV
+// PHASE IV - doesn't work?
 
 function dinerBreakfast() {
-  let order = "All of your bacon and eggs";
+  let order = "Give me all of your bacon and eggs";
+  console.log(order);
 
+  return function(extras) {
+    order = `${order} and ${extras}. Now.`;
+    console.log(order);
+  };
 }
+
+dinerBreakfast();
+dinerBreakfast("fresh squeezed OJ");
