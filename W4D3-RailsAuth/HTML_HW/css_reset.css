@@ -25,19 +25,46 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1.5;
+  font-family: Arial, sans-serif;
+  background-color: #FEFF1;
 }
-ol, ul {
-  list-style: none;
+ol {
+  list-style: upper-roman inside;
 }
 blockquote, q {
   quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+header > img {
+  width: 100px;
+}
+
+.ingredients-list {
+  list-style: square-inside;
+}
+
+ul li a {
+  text-decoration: none;
+  color: inherit;
 }
