@@ -25,9 +25,11 @@ footer, header, hgroup, menu, nav, section {
 }*/
 
 body {
+  margin: 0 auto;
   line-height: 1.5;
   font-family: Arial, sans-serif;
   background-color: bisque;
+  width: 900px;
 }
 ol {
   list-style: upper-roman inside;
@@ -57,7 +59,8 @@ h2 {
   font-weight: bold;
 }
 
-header > img {
+body header > img {
+  display: inline;
   width: 100px;
 }
 
@@ -89,4 +92,22 @@ input[type="radio"]{
 
 input[type="radio"]:checked {
   background-position: 30px 30px;
+}
+
+nav ul li{
+  display: inline;
+}
+
+aside {
+  width: 180px;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+textarea {
+  width: 350px;
+}
+
+label {
+  display: block;
 }
