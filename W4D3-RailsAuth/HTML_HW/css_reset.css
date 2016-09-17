@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,
+/*html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -17,16 +17,17 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
+}*/
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+/*article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
-}
+}*/
+
 body {
   line-height: 1.5;
   font-family: Arial, sans-serif;
-  background-color: #FEFF1;
+  background-color: bisque;
 }
 ol {
   list-style: upper-roman inside;
@@ -65,6 +66,27 @@ header > img {
 }
 
 ul li a {
-  text-decoration: none;
+  text-decoration: underline;;
   color: inherit;
+}
+
+ol li:nth-of-type(2n) {
+  background-color:whitesmoke;
+}
+
+h2 + .user_review {
+  border-top: 1px solid black;
+}
+
+input[type="radio"]{
+  -webkit-appearance: none;
+  width: 27px;
+  height: 27px;
+  background-image: url(./internetkid.jpg);
+  background-size: cover;
+  vertical-align: bottom;
+}
+
+input[type="radio"]:checked {
+  background-position: 30px 30px;
 }
