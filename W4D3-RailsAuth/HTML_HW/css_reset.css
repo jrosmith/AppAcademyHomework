@@ -3,7 +3,7 @@ body {
   line-height: 1.5;
   font-family: Arial, sans-serif;
   background-color: bisque;
-  width: 900px;
+  width: 60%;
 }
 ol {
   list-style: upper-roman inside;
@@ -25,7 +25,8 @@ body header > img {
 }
 
 .ingredients-list {
-  list-style: square-inside;
+  float: left;
+  list-style: armenian;
 }
 
 ul li a, figcaption a {
@@ -54,6 +55,10 @@ input[type="radio"]:checked {
   background-position: 30px 30px;
 }
 
+input:last-child:hover{
+  -webkit-filter: brightness(90%);
+}
+
 nav {
   display: inline-block;
 }
@@ -77,6 +82,7 @@ section {
   width: 700px;
   display: inline-block;
   vertical-align: top;
+  float: right;
 }
 textarea {
   width: 350px;
